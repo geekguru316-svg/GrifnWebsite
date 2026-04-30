@@ -674,6 +674,10 @@ button { font-family: inherit; cursor: pointer; border: none; }
   text-decoration: none;
   position: relative;
   transition: var(--transition-base);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 .book-tabs .tab:hover {
   color: var(--text-primary);
