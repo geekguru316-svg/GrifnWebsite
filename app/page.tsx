@@ -5,6 +5,7 @@ import Portfolio from '@/components/Portfolio';
 import Stats from '@/components/Stats';
 import Testimonials from '@/components/Testimonials';
 import CTA from '@/components/CTA';
+import Book from '@/components/Book';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Portfolio />
       <Stats />
       <Testimonials />
+      <Book />
       <CTA />
       <Footer />
     </>

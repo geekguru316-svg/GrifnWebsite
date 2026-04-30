@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-              <Image src="/logo.png" alt="GRIFN Logo" width={45} height={45} style={{ objectFit: 'contain' }} />
+              <Image src="/logo.png" alt="GRIFN Logo" width={54} height={54} style={{ objectFit: 'contain' }} />
               <div>
                 <h3 style={{ margin: 0, fontSize: '22px', lineHeight: 1 }}>GRIFN</h3>
                 <span style={{ fontWeight: 500, fontSize: '10px', opacity: 0.7, letterSpacing: '2px', display: 'block', marginTop: '2px' }}>SOFTWARE SOLUTIONS</span>

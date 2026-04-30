@@ -56,7 +56,7 @@ export default function QuotePage() {
         <nav className="navbar scrolled">
           <div className="container">
             <Link href="/" className="navbar-brand" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <Image src="/logo.png" alt="GRIFN Logo" width={45} height={45} style={{ objectFit: 'contain' }} />
+              <Image src="/logo.png" alt="GRIFN Logo" width={54} height={54} style={{ objectFit: 'contain' }} />
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <span style={{ fontWeight: 800, fontSize: '22px', lineHeight: 1 }}>GRIFN</span>
                 <span style={{ fontWeight: 500, fontSize: '10px', opacity: 0.7, letterSpacing: '2px', marginTop: '2px' }}>SOFTWARE SOLUTIONS</span>
@@ -92,7 +92,7 @@ export default function QuotePage() {
       <nav className="navbar scrolled">
         <div className="container">
           <Link href="/" className="navbar-brand" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <Image src="/logo.png" alt="GRIFN Logo" width={45} height={45} style={{ objectFit: 'contain' }} />
+            <Image src="/logo.png" alt="GRIFN Logo" width={54} height={54} style={{ objectFit: 'contain' }} />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <span style={{ fontWeight: 800, fontSize: '22px', lineHeight: 1 }}>GRIFN</span>
               <span style={{ fontWeight: 500, fontSize: '10px', opacity: 0.7, letterSpacing: '2px', marginTop: '2px' }}>SOFTWARE SOLUTIONS</span>
