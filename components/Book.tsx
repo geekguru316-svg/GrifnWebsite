@@ -51,18 +51,56 @@ export default function Book() {
                 Want to know more about our pricing? Request it today!
               </h3>
               
-              <form className="quote-form simple-quote-form" onSubmit={(e) => e.preventDefault()} style={{ maxWidth: 600, margin: '0 auto' }}>
+              <form className="quote-form simple-quote-form" onSubmit={(e) => e.preventDefault()} style={{ maxWidth: 700, margin: '0 auto' }}>
                 <div className="form-group">
                   <input type="text" id="simple-name" placeholder="Full Name *" required />
                 </div>
                 <div className="form-group">
                   <input type="email" id="simple-email" placeholder="Email Address *" required />
                 </div>
-                <div className="form-group">
+                <div className="form-group" style={{ marginBottom: 32 }}>
                   <input type="tel" id="simple-mobile" placeholder="Mobile Number *" required />
                 </div>
+
+                <div className="form-group">
+                  <label style={{ display: 'block', marginBottom: 12, fontWeight: 500, fontSize: '1.1rem' }}>What service do you need? *</label>
+                  <div className="services-checkbox-grid">
+                    <label className="checkbox-label"><input type="checkbox" /> Web Design & Development</label>
+                    <label className="checkbox-label"><input type="checkbox" /> Digital Marketing</label>
+                    <label className="checkbox-label"><input type="checkbox" /> Branding / Graphic Design</label>
+                    <label className="checkbox-label"><input type="checkbox" /> Web Hosting</label>
+                    <label className="checkbox-label"><input type="checkbox" /> Website Maintenance</label>
+                    <label className="checkbox-label"><input type="checkbox" /> Other</label>
+                  </div>
+                </div>
+
                 <div className="form-group" style={{ marginTop: 24 }}>
-                  <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '16px', fontSize: '1.1rem' }}>
+                  <label htmlFor="simple-desc" style={{ display: 'block', marginBottom: 8, fontWeight: 500, fontSize: '1.1rem' }}>Please describe your project briefly *</label>
+                  <textarea 
+                    id="simple-desc" 
+                    placeholder="Describe your project. Preferred call time. Include your company and website." 
+                    required 
+                    style={{ minHeight: 120 }}
+                  ></textarea>
+                </div>
+
+                <div className="form-group" style={{ marginTop: 24 }}>
+                  <label htmlFor="simple-budget" style={{ display: 'block', marginBottom: 8, fontWeight: 500, fontSize: '1.1rem' }}>What's your estimated budget range? *</label>
+                  <select id="simple-budget" required>
+                    <option value="">—Please choose an option—</option>
+                    <option value="under-1k">Under $1,000</option>
+                    <option value="1k-5k">$1,000 - $5,000</option>
+                    <option value="5k-10k">$5,000 - $10,000</option>
+                    <option value="10k+">$10,000+</option>
+                  </select>
+                </div>
+
+                <div style={{ marginTop: 24, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                  By proceeding, you confirm that you have read and agree to our <a href="#" style={{ color: '#0ea5e9', textDecoration: 'none' }}>Privacy Notice</a>.
+                </div>
+
+                <div className="form-group" style={{ marginTop: 24, textAlign: 'center' }}>
+                  <button type="submit" className="btn btn-primary" style={{ padding: '16px 40px', fontSize: '1rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>
                     Request Quote
                   </button>
                 </div>
