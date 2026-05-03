@@ -23,29 +23,34 @@ export default function Book() {
     setIsSubmitting(true);
     setSubmitError(null);
 
-    const formData = new FormData();
-    formData.append("name", bookingForm.name);
-    formData.append("email", bookingForm.email);
-    formData.append("selected_date", `May ${selectedDate}, 2026`);
-    formData.append("selected_time", selectedTime || "");
-    
-    // Add Web3Forms access key
-    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "");
-    formData.append("from_name", "GRIFN Website Meeting Scheduler");
-    formData.append("subject", `New Meeting Scheduled: May ${selectedDate} at ${selectedTime}`);
+    const payload = {
+      service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+      template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+      user_id: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '',
+      template_params: {
+        ...bookingForm,
+        selected_date: `May ${selectedDate}, 2026`,
+        selected_time: selectedTime || "",
+        from_name: bookingForm.name,
+        reply_to: bookingForm.email,
+        subject: `New Meeting Scheduled: May ${selectedDate} at ${selectedTime}`
+      }
+    };
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
-        body: formData
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
       });
 
-      const data = await response.json();
-
-      if (data.success) {
+      if (response.ok) {
         setBookingStep('success');
       } else {
-        setSubmitError(data.message || "Something went wrong. Please try again.");
+        const errorData = await response.text();
+        setSubmitError(`EmailJS Error: ${errorData || "Something went wrong"}`);
       }
     } catch (error) {
       setSubmitError("Network error. Please check your connection.");

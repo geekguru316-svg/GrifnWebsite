@@ -49,32 +49,36 @@ export default function QuoteForm({ onSuccess }: { onSuccess?: () => void }) {
     setIsSubmitting(true);
     setSubmitError(null);
 
-    const formData = new FormData();
-    Object.entries(form).forEach(([key, value]) => {
-      formData.append(key, value);
-    });
-    
-    // Add Web3Forms access key
-    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "");
-    formData.append("from_name", "GRIFN Website Quote Request");
-    formData.append("subject", `New Quote Request from ${form.name}`);
+    const payload = {
+      service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+      template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+      user_id: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '',
+      template_params: {
+        ...form,
+        from_name: form.name,
+        reply_to: form.email,
+        subject: `New Quote Request from ${form.name}`
+      }
+    };
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
-        body: formData
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
       });
 
-      const data = await response.json();
-
-      if (data.success) {
+      if (response.ok) {
         if (onSuccess) {
           onSuccess();
         } else {
           setSubmitted(true);
         }
       } else {
-        setSubmitError(data.message || "Something went wrong. Please try again.");
+        const errorData = await response.text();
+        setSubmitError(`EmailJS Error: ${errorData || "Something went wrong"}`);
       }
     } catch (error) {
       setSubmitError("Network error. Please check your connection.");
