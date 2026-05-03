@@ -42,7 +42,7 @@ function DigitalGlobe() {
             itemSize={3}
           />
         </bufferGeometry>
-        <pointMaterial
+        <PointMaterial
           transparent
           color="#0ea5e9"
           size={0.03}
