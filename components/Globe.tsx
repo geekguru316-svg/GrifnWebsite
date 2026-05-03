@@ -2,83 +2,88 @@
 
 import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { PointMaterial, Float, Points, OrbitControls } from '@react-three/drei';
+import { PointMaterial, Float, Sphere, OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 
-function NeuralPlexus() {
+function CompactDigitalGlobe() {
   const groupRef = useRef<THREE.Group>(null);
-  const count = 400; // Fewer, more deliberate points
+  const count = 4000; // High density for that rich look
   
-  // Create an abstract cluster (not a hard sphere)
-  const [points, lines] = useMemo(() => {
+  // Generate random points on a SMALLER sphere (1.6 radius) to avoid clipping
+  const points = useMemo(() => {
     const p = new Float32Array(count * 3);
-    const l: number[] = [];
-    
-    // Generate points in a slightly flattened cloud
     for (let i = 0; i < count; i++) {
-      p[i * 3] = (Math.random() - 0.5) * 6;
-      p[i * 3 + 1] = (Math.random() - 0.5) * 4;
-      p[i * 3 + 2] = (Math.random() - 0.5) * 4;
+      const r = 1.6; // Reduced from 2.0 to 1.6 to ensure no "cutting"
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.acos(2 * Math.random() - 1);
+      p[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+      p[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+      p[i * 3 + 2] = r * Math.cos(phi);
     }
-
-    // Connect points that are close to each other
-    for (let i = 0; i < count; i++) {
-      for (let j = i + 1; j < count; j++) {
-        const dx = p[i * 3] - p[j * 3];
-        const dy = p[i * 3 + 1] - p[j * 3 + 1];
-        const dz = p[i * 3 + 2] - p[j * 3 + 2];
-        const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
-        
-        if (dist < 1.2) {
-          l.push(p[i * 3], p[i * 3 + 1], p[i * 3 + 2]);
-          l.push(p[j * 3], p[j * 3 + 1], p[j * 3 + 2]);
-        }
-      }
-    }
-
-    return [p, new Float32Array(l)];
+    return p;
   }, [count]);
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
     if (groupRef.current) {
-      groupRef.current.rotation.y = t * 0.08;
-      groupRef.current.rotation.x = Math.sin(t * 0.2) * 0.1;
+      groupRef.current.rotation.y = t * 0.1; // Elegant slow rotation
+      groupRef.current.rotation.x = Math.sin(t * 0.05) * 0.1;
     }
   });
 
   return (
     <group ref={groupRef}>
-      {/* 1. The Nodes (Dots) */}
-      <Points positions={points}>
-        <PointMaterial
-          transparent
-          color="#0ea5e9"
-          size={0.05}
-          sizeAttenuation={true}
-          depthWrite={false}
-          blending={THREE.AdditiveBlending}
-          opacity={0.6}
-        />
-      </Points>
-
-      {/* 2. The Connections (Lines) */}
-      <lineSegments>
+      {/* 1. High Density Blue Particles */}
+      <points>
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            count={lines.length / 3}
-            array={lines}
+            count={count}
+            array={points}
             itemSize={3}
           />
         </bufferGeometry>
-        <lineBasicMaterial
-          color="#0ea5e9"
+        <PointMaterial
           transparent
-          opacity={0.15}
+          color="#3b82f6"
+          size={0.025}
+          sizeAttenuation={true}
+          depthWrite={false}
+          blending={THREE.AdditiveBlending}
+          opacity={0.7}
+        />
+      </points>
+
+      {/* 2. Inner Grid Structure (Subtle) */}
+      <Sphere args={[1.58, 20, 20]}>
+        <meshBasicMaterial 
+          color="#1e40af" 
+          wireframe 
+          transparent 
+          opacity={0.15} 
           blending={THREE.AdditiveBlending}
         />
-      </lineSegments>
+      </Sphere>
+
+      {/* 3. Core Glow */}
+      <Sphere args={[1.5, 32, 32]}>
+        <meshBasicMaterial 
+          color="#1e3a8a" 
+          transparent 
+          opacity={0.1} 
+        />
+      </Sphere>
+
+      {/* 4. Atmospheric Halo */}
+      <Sphere args={[1.75, 32, 32]}>
+        <meshBasicMaterial 
+          color="#3b82f6" 
+          transparent 
+          opacity={0.05} 
+          side={THREE.BackSide}
+          blending={THREE.AdditiveBlending}
+        />
+      </Sphere>
     </group>
   );
 }
@@ -95,16 +100,16 @@ export default function Globe() {
       position: 'relative'
     }}>
       <Canvas 
-        camera={{ position: [0, 0, 6], fov: 40 }}
+        camera={{ position: [0, 0, 5], fov: 45 }}
         gl={{ antialias: true, alpha: true }}
       >
         <ambientLight intensity={0.5} />
         
-        <Float speed={1} rotationIntensity={0.2} floatIntensity={0.5}>
-          <NeuralPlexus />
+        <Float speed={1.5} rotationIntensity={0.2} floatIntensity={0.3}>
+          <CompactDigitalGlobe />
         </Float>
 
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false} autoRotate={false} />
       </Canvas>
     </div>
   );
