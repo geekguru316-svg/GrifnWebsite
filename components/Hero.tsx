@@ -5,10 +5,10 @@ import ScrollReveal from './ScrollReveal';
 export default function Hero() {
   return (
     <section className="hero" id="home">
-      <div className="container">
+      <div className="container" style={{ justifyContent: 'center' }}>
         <div className="hero-content">
           <ScrollReveal>
-            <div className="hero-badge">
+            <div className="hero-badge" style={{ margin: '0 auto 32px' }}>
               <span className="dot" />
               Available for Projects
             </div>
@@ -37,10 +37,6 @@ export default function Hero() {
               </a>
             </div>
           </ScrollReveal>
-        </div>
-
-        <div className="hero-visual" style={{ minHeight: 450 }}>
-          <Globe />
         </div>
       </div>
     </section>
