@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import ScrollReveal from './ScrollReveal';
 import QuoteForm from './QuoteForm';
 
@@ -134,9 +135,14 @@ export default function Book() {
             {/* Right side: Calendar (Mockup) */}
             <ScrollReveal delay={0.3}>
               <div className="calendar-card">
-                <div className="calendar-header">
-                  <h4>Select an appointment time</h4>
-                  <span className="timezone">GMT+08:00 Philippine Standard Time</span>
+                <div className="calendar-header" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                  <div style={{ flex: 1 }}>
+                    <h4>Select an appointment time</h4>
+                    <span className="timezone">GMT+08:00 Philippine Standard Time</span>
+                  </div>
+                  <div style={{ width: '80px', height: '80px', flexShrink: 0, opacity: 0.9 }}>
+                    <Image src="/meeting-illustration.png" alt="Meeting Illustration" width={80} height={80} style={{ objectFit: 'contain' }} />
+                  </div>
                 </div>
                 
                 <div className="calendar-body">
@@ -212,7 +218,7 @@ export default function Book() {
                         <button 
                           type="submit" 
                           className="btn btn-primary" 
-                          style={{ marginTop: 16, width: '100%', padding: '14px 0', opacity: isSubmitting ? 0.7 : 1 }}
+                          style={{ marginTop: 16, width: '100%', padding: '14px 0', opacity: isSubmitting ? 0.7 : 1, justifyContent: 'center' }}
                           disabled={isSubmitting}
                         >
                           {isSubmitting ? 'Confirming...' : 'Confirm Booking'}

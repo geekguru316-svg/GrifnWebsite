@@ -212,7 +212,7 @@ export default function QuoteForm({ onSuccess }: { onSuccess?: () => void }) {
         <button 
           type="submit" 
           className="btn btn-primary" 
-          style={{ fontSize: 16, padding: '16px 40px', opacity: isSubmitting ? 0.7 : 1 }}
+          style={{ fontSize: 16, padding: '16px 40px', opacity: isSubmitting ? 0.7 : 1, justifyContent: 'center' }}
           disabled={isSubmitting}
         >
           {isSubmitting ? 'Sending...' : 'Submit Request →'}
