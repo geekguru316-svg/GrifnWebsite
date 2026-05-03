@@ -1,10 +1,11 @@
+import Link from 'next/link';
 import ScrollReveal from './ScrollReveal';
 
 const testimonials = [
   {
     stars: 5,
     quote:
-      'GRIFN transformed our online presence completely. The design is stunning and our conversion rate doubled within the first month.',
+      'GRIFN transformed our online presence completely. The design is stunning and as our chosen web developer Cebu, they doubled our conversion rate within the first month.',
     name: 'Sarah Chen',
     title: 'CEO, NovaTech',
     initials: 'SC',
@@ -12,7 +13,7 @@ const testimonials = [
   {
     stars: 5,
     quote:
-      'Exceptional attention to detail and flawless execution. They delivered a world-class e-commerce platform ahead of schedule.',
+      'Exceptional attention to detail and flawless execution. They delivered a world-class e-commerce platform ahead of schedule, proving to be an exceptional Shopify developer Cebu.',
     name: 'Marcus Rivera',
     title: 'Founder, Apex Retail',
     initials: 'MR',
@@ -60,6 +61,14 @@ export default function Testimonials() {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={0.4}>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <Link href="/quote" className="btn btn-primary">
+              Get My Quote →
+            </Link>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

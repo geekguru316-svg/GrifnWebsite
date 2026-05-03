@@ -4,12 +4,12 @@ const services = [
   {
     icon: '🎨',
     title: 'Web Design',
-    desc: 'Pixel-perfect, conversion-focused designs crafted to captivate your audience and elevate your brand.',
+    desc: 'Pixel-perfect, conversion-focused affordable web design Cebu City for SMEs to captivate your audience and elevate your brand.',
   },
   {
     icon: '💻',
     title: 'Web Development',
-    desc: 'High-performance, scalable websites built with modern frameworks and clean, maintainable code.',
+    desc: 'High-performance, scalable software solutions Philippines built with modern frameworks and clean, maintainable code.',
   },
   {
     icon: '📱',
@@ -19,7 +19,7 @@ const services = [
   {
     icon: '🛒',
     title: 'E-Commerce',
-    desc: 'Custom online stores with seamless checkout flows, inventory management, and payment integration.',
+    desc: 'Custom online stores and e-commerce development Philippines with seamless checkout flows, inventory management, and payment integration.',
   },
   {
     icon: '🔍',
@@ -29,7 +29,7 @@ const services = [
   {
     icon: '🎯',
     title: 'UI/UX Strategy',
-    desc: 'User-centered design strategy backed by research, wireframing, prototyping, and testing.',
+    desc: 'User-centered UI/UX design Philippines backed by research, wireframing, prototyping, and testing.',
   },
 ];
 
@@ -59,6 +59,14 @@ export default function Services() {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={0.4}>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <a href="#portfolio" className="btn btn-primary">
+              View Portfolio →
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

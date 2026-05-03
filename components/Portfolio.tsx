@@ -7,18 +7,21 @@ const projects = [
     tag: 'E-Commerce',
     title: 'Luxe Storefront',
     desc: 'Premium online shopping experience with dark-themed product showcase.',
+    altText: 'E-commerce project by GRIFN — web design Cebu.',
   },
   {
     image: '/portfolio-2.png',
     tag: 'SaaS Dashboard',
     title: 'DataFlow Analytics',
     desc: 'Real-time analytics dashboard for enterprise data management.',
+    altText: 'SaaS Dashboard project by GRIFN — software solutions Philippines.',
   },
   {
     image: '/portfolio-3.png',
     tag: 'Brand Identity',
     title: 'Vertex Creative',
     desc: 'Full brand and web presence for a creative design studio.',
+    altText: 'Brand Identity project by GRIFN — UI/UX design Philippines.',
   },
 ];
 
@@ -43,7 +46,7 @@ export default function Portfolio() {
               <div className="portfolio-card">
                 <Image
                   src={p.image}
-                  alt={p.title}
+                  alt={p.altText}
                   width={600}
                   height={412}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -57,6 +60,14 @@ export default function Portfolio() {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={0.4}>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <a href="#testimonials" className="btn btn-secondary">
+              Read Client Testimonials →
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

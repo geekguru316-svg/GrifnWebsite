@@ -24,7 +24,7 @@ export default function Hero() {
 
           <ScrollReveal delay={0.2}>
             <p className="hero-subtitle">
-              Premium web design and full-stack development for ambitious brands.
+              Premium web design Cebu and full-stack software solutions Philippines for ambitious brands.
               We turn your vision into pixel-perfect, high-performance websites.
             </p>
           </ScrollReveal>
