@@ -239,6 +239,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
 .hero-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 8px 16px;
   background: rgba(139, 92, 246, 0.1);
@@ -247,7 +248,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
   font-size: 13px;
   font-weight: 600;
   color: var(--accent-light);
-  margin-bottom: 32px;
+  margin: 0 auto 32px;
 }
 .hero-badge .dot {
   width: 6px;
