@@ -122,11 +122,14 @@ export default function Book() {
                     <span className="icon">🎥</span> Google Meet video conference info provided after booking
                   </p>
                   
-                  <div className="visual-image-wrapper">
-                    <div className="visual-placeholder">
-                      <div className="glow-orb"></div>
-                      <h2>Let's build something extraordinary together.</h2>
-                    </div>
+                  <div className="visual-image-wrapper" style={{ marginTop: 24 }}>
+                    <Image 
+                      src="/tech-professional.png" 
+                      alt="Tech Professional" 
+                      width={500} 
+                      height={600} 
+                      style={{ width: '100%', height: 'auto', borderRadius: '16px', objectFit: 'cover', boxShadow: 'var(--shadow-glow)' }} 
+                    />
                   </div>
                 </div>
               </div>
@@ -135,14 +138,9 @@ export default function Book() {
             {/* Right side: Calendar (Mockup) */}
             <ScrollReveal delay={0.3}>
               <div className="calendar-card">
-                <div className="calendar-header" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                  <div style={{ flex: 1 }}>
-                    <h4>Select an appointment time</h4>
-                    <span className="timezone">GMT+08:00 Philippine Standard Time</span>
-                  </div>
-                  <div style={{ width: '80px', height: '80px', flexShrink: 0, opacity: 0.9 }}>
-                    <Image src="/meeting-illustration.png" alt="Meeting Illustration" width={80} height={80} style={{ objectFit: 'contain' }} />
-                  </div>
+                <div className="calendar-header">
+                  <h4>Select an appointment time</h4>
+                  <span className="timezone">GMT+08:00 Philippine Standard Time</span>
                 </div>
                 
                 <div className="calendar-body">
