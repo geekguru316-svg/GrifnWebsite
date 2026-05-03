@@ -29,6 +29,8 @@ const timelineOptions = [
 
 export default function QuoteForm({ onSuccess }: { onSuccess?: () => void }) {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -42,12 +44,42 @@ export default function QuoteForm({ onSuccess }: { onSuccess?: () => void }) {
   const update = (field: string, value: string) =>
     setForm((prev) => ({ ...prev, [field]: value }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (onSuccess) {
-      onSuccess();
-    } else {
-      setSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    const formData = new FormData();
+    Object.entries(form).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+    
+    // Add Web3Forms access key
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "");
+    formData.append("from_name", "GRIFN Website Quote Request");
+    formData.append("subject", `New Quote Request from ${form.name}`);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        if (onSuccess) {
+          onSuccess();
+        } else {
+          setSubmitted(true);
+        }
+      } else {
+        setSubmitError(data.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setSubmitError("Network error. Please check your connection.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -164,10 +196,22 @@ export default function QuoteForm({ onSuccess }: { onSuccess?: () => void }) {
         />
       </div>
 
+      {/* Error Message */}
+      {submitError && (
+        <div style={{ color: '#ef4444', backgroundColor: 'rgba(239, 68, 68, 0.1)', padding: '12px', borderRadius: '8px', marginBottom: '24px', fontSize: '0.9rem' }}>
+          {submitError}
+        </div>
+      )}
+
       {/* Submit */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 24, marginTop: 8 }}>
-        <button type="submit" className="btn btn-primary" style={{ fontSize: 16, padding: '16px 40px' }}>
-          Submit Request →
+        <button 
+          type="submit" 
+          className="btn btn-primary" 
+          style={{ fontSize: 16, padding: '16px 40px', opacity: isSubmitting ? 0.7 : 1 }}
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? 'Sending...' : 'Submit Request →'}
         </button>
         <p style={{ fontSize: 13, color: 'var(--text-tertiary)', margin: 0 }}>
           We respect your privacy. No spam, ever.

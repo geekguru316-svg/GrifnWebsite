@@ -10,15 +10,48 @@ export default function Book() {
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [bookingStep, setBookingStep] = useState<'calendar' | 'details' | 'success'>('calendar');
   const [bookingForm, setBookingForm] = useState({ name: '', email: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleTimeSelect = (time: string) => {
     setSelectedTime(time);
     setBookingStep('details');
   };
 
-  const handleBookingSubmit = (e: React.FormEvent) => {
+  const handleBookingSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setBookingStep('success');
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    const formData = new FormData();
+    formData.append("name", bookingForm.name);
+    formData.append("email", bookingForm.email);
+    formData.append("selected_date", `May ${selectedDate}, 2026`);
+    formData.append("selected_time", selectedTime || "");
+    
+    // Add Web3Forms access key
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "");
+    formData.append("from_name", "GRIFN Website Meeting Scheduler");
+    formData.append("subject", `New Meeting Scheduled: May ${selectedDate} at ${selectedTime}`);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setBookingStep('success');
+      } else {
+        setSubmitError(data.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setSubmitError("Network error. Please check your connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -163,7 +196,22 @@ export default function Book() {
                           <label style={{ fontSize: '0.9rem', marginBottom: 8, display: 'block', color: 'var(--text-secondary)' }}>Email Address *</label>
                           <input type="email" required value={bookingForm.email} onChange={e => setBookingForm({...bookingForm, email: e.target.value})} style={{ background: 'var(--bg-secondary)' }} />
                         </div>
-                        <button type="submit" className="btn btn-primary" style={{ marginTop: 16, width: '100%', padding: '14px 0' }}>Confirm Booking</button>
+
+                        {/* Error Message */}
+                        {submitError && (
+                          <div style={{ color: '#ef4444', backgroundColor: 'rgba(239, 68, 68, 0.1)', padding: '10px', borderRadius: '8px', fontSize: '0.8rem', marginTop: '8px' }}>
+                            {submitError}
+                          </div>
+                        )}
+
+                        <button 
+                          type="submit" 
+                          className="btn btn-primary" 
+                          style={{ marginTop: 16, width: '100%', padding: '14px 0', opacity: isSubmitting ? 0.7 : 1 }}
+                          disabled={isSubmitting}
+                        >
+                          {isSubmitting ? 'Confirming...' : 'Confirm Booking'}
+                        </button>
                       </form>
                     </div>
                   )}
