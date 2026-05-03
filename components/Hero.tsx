@@ -16,16 +16,14 @@ export default function Hero() {
 
           <ScrollReveal delay={0.1}>
             <h1 className="hero-title">
-              We Design &amp; Build{' '}
-              <span className="gradient-text">Digital Experiences</span>{' '}
-              That Convert
+              Elevate Your Business with Premium{' '}
+              <span className="gradient-text">Web Design Cebu</span>
             </h1>
           </ScrollReveal>
-
           <ScrollReveal delay={0.2}>
             <p className="hero-subtitle">
-              Premium web design Cebu and full-stack software solutions Philippines for ambitious brands.
-              We turn your vision into pixel-perfect, high-performance websites.
+              Helping Cebu&apos;s growing SMEs and Philippines&apos; ambitious brands scale with high-performance websites and ROI-focused software solutions. 
+              Turn your online presence into a 24/7 revenue asset.
             </p>
           </ScrollReveal>
 

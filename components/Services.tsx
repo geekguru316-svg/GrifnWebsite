@@ -3,33 +3,33 @@ import ScrollReveal from './ScrollReveal';
 const services = [
   {
     icon: '🎨',
-    title: 'Web Design',
-    desc: 'Pixel-perfect, conversion-focused affordable web design Cebu City for SMEs to captivate your audience and elevate your brand.',
+    title: 'Web Design Cebu',
+    desc: 'Premium, conversion-focused web design Cebu. We build sites that don&apos;t just look good but actually sell for Cebu SMEs.',
   },
   {
     icon: '💻',
-    title: 'Web Development',
-    desc: 'High-performance, scalable software solutions Philippines built with modern frameworks and clean, maintainable code.',
+    title: 'Software Solutions PH',
+    desc: 'Scalable software solutions Philippines. From custom dashboards to complex web apps, we build for growth and local market performance.',
   },
   {
     icon: '📱',
-    title: 'Responsive Design',
-    desc: 'Flawless experiences across every device — desktop, tablet, and mobile, beautifully optimized.',
+    title: 'Mobile Optimization',
+    desc: 'Flawless experiences across every device. We ensure your Cebu-based customers have a perfect mobile experience.',
   },
   {
     icon: '🛒',
-    title: 'E-Commerce',
-    desc: 'Custom online stores and e-commerce development Philippines with seamless checkout flows, inventory management, and payment integration.',
+    title: 'E-Commerce PH',
+    desc: 'Scale your retail business with e-commerce development Philippines. Secure payments and local logistics integration.',
   },
   {
     icon: '🔍',
-    title: 'SEO & Performance',
-    desc: 'Search engine optimization and speed tuning to maximize your visibility and user engagement.',
+    title: 'SEO Cebu & PH',
+    desc: 'Outrank your local competitors with expert SEO Cebu and Philippines. We optimize for speed and local search intent.',
   },
   {
     icon: '🎯',
     title: 'UI/UX Strategy',
-    desc: 'User-centered UI/UX design Philippines backed by research, wireframing, prototyping, and testing.',
+    desc: 'User-centered UI/UX design Philippines backed by research into local buyer behavior and digital habits.',
   },
 ];
 

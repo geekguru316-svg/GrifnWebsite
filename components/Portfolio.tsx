@@ -3,24 +3,27 @@ import ScrollReveal from './ScrollReveal';
 
 const projects = [
   {
+    id: 'cebu-artisan-collective',
     image: '/portfolio-1.png',
-    tag: 'E-Commerce',
-    title: 'Luxe Storefront',
-    desc: 'Premium online shopping experience with dark-themed product showcase.',
+    tag: 'E-Commerce ROI',
+    title: 'Cebu Artisan Collective',
+    desc: 'How we scaled a local Cebu brand to global markets, increasing online sales by 120%.',
     altText: 'E-commerce project by GRIFN — web design Cebu.',
   },
   {
+    id: 'mactan-logistics-pro',
     image: '/portfolio-2.png',
-    tag: 'SaaS Dashboard',
-    title: 'DataFlow Analytics',
-    desc: 'Real-time analytics dashboard for enterprise data management.',
+    tag: 'SaaS / Logistics',
+    title: 'Mactan Logistics Pro',
+    desc: 'Custom software solution for a PH freight leader, streamlining local logistics and fleet tracking.',
     altText: 'SaaS Dashboard project by GRIFN — software solutions Philippines.',
   },
   {
+    id: 'metro-cebu-real-estate',
     image: '/portfolio-3.png',
-    tag: 'Brand Identity',
-    title: 'Vertex Creative',
-    desc: 'Full brand and web presence for a creative design studio.',
+    tag: 'Lead Generation',
+    title: 'Metro Cebu Real Estate',
+    desc: 'High-converting platform for Cebu&apos;s real estate market, generating 200+ qualified leads per month.',
     altText: 'Brand Identity project by GRIFN — UI/UX design Philippines.',
   },
 ];
@@ -35,15 +38,14 @@ export default function Portfolio() {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="section-subtitle">
-            A selection of recent work we&apos;re proud of. Each project is a unique
-            collaboration crafted to exceed expectations.
+            Real-world results for Cebu businesses. Each project is a case study in driving revenue and digital growth.
           </p>
         </ScrollReveal>
 
         <div className="portfolio-grid">
           {projects.map((p, i) => (
             <ScrollReveal key={p.title} delay={i * 0.1}>
-              <div className="portfolio-card">
+              <a href={`/portfolio/${p.id}`} className="portfolio-card" style={{ display: 'block', cursor: 'pointer' }}>
                 <Image
                   src={p.image}
                   alt={p.altText}
@@ -55,8 +57,9 @@ export default function Portfolio() {
                   <span className="portfolio-tag">{p.tag}</span>
                   <h3>{p.title}</h3>
                   <p>{p.desc}</p>
+                  <span style={{ fontSize: '0.8rem', marginTop: '1rem', opacity: 0.8, color: '#0ea5e9' }}>Read Case Study →</span>
                 </div>
-              </div>
+              </a>
             </ScrollReveal>
           ))}
         </div>
