@@ -6,6 +6,20 @@ import QuoteForm from './QuoteForm';
 
 export default function Book() {
   const [activeTab, setActiveTab] = useState<'quote' | 'meeting'>('quote');
+  const [selectedDate, setSelectedDate] = useState<number>(30);
+  const [selectedTime, setSelectedTime] = useState<string | null>(null);
+  const [bookingStep, setBookingStep] = useState<'calendar' | 'details' | 'success'>('calendar');
+  const [bookingForm, setBookingForm] = useState({ name: '', email: '' });
+
+  const handleTimeSelect = (time: string) => {
+    setSelectedTime(time);
+    setBookingStep('details');
+  };
+
+  const handleBookingSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setBookingStep('success');
+  };
 
   return (
     <section id="book" className="section" style={{ background: 'var(--bg-secondary)', position: 'relative', overflow: 'hidden' }}>
@@ -88,37 +102,82 @@ export default function Book() {
                 </div>
                 
                 <div className="calendar-body">
-                  <div className="calendar-month">
-                    <div className="month-nav">
-                      <button>&lt;</button>
-                      <span>April 2026</span>
-                      <button>&gt;</button>
-                    </div>
-                    <div className="weekdays">
-                      <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
-                    </div>
-                    <div className="days">
-                      <span className="disabled">29</span><span className="disabled">30</span><span className="disabled">31</span>
-                      <span>1</span><span>2</span><span>3</span><span>4</span>
-                      <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
-                      <span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
-                      <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
-                      <span>26</span><span>27</span><span>28</span><span>29</span><span className="active">30</span>
-                    </div>
-                  </div>
+                  {bookingStep === 'calendar' && (
+                    <>
+                      <div className="calendar-month">
+                        <div className="month-nav">
+                          <button>&lt;</button>
+                          <span>May 2026</span>
+                          <button>&gt;</button>
+                        </div>
+                        <div className="weekdays">
+                          <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                        </div>
+                        <div className="days">
+                          <span className="disabled">26</span><span className="disabled">27</span><span className="disabled">28</span>
+                          <span className="disabled">29</span><span className="disabled">30</span>
+                          {[...Array(31)].map((_, i) => {
+                            const day = i + 1;
+                            return (
+                              <span 
+                                key={day} 
+                                className={selectedDate === day ? 'active' : ''}
+                                onClick={() => setSelectedDate(day)}
+                                style={{ cursor: 'pointer' }}
+                              >
+                                {day}
+                              </span>
+                            );
+                          })}
+                        </div>
+                      </div>
 
-                  <div className="time-slots">
-                    <div className="selected-date">Friday, May 1</div>
-                    <button className="time-slot">9:00 am</button>
-                    <button className="time-slot">9:45 am</button>
-                    <button className="time-slot">10:30 am</button>
-                    <button className="time-slot">11:15 am</button>
-                    <button className="time-slot">2:00 pm</button>
-                    <button className="time-slot">2:45 pm</button>
-                    <button className="time-slot">3:30 pm</button>
-                    <button className="time-slot">4:15 pm</button>
-                    <button className="time-slot">5:00 pm</button>
-                  </div>
+                      <div className="time-slots">
+                        <div className="selected-date">Friday, May {selectedDate}</div>
+                        {['9:00 am', '9:45 am', '10:30 am', '11:15 am', '2:00 pm', '2:45 pm', '3:30 pm', '4:15 pm', '5:00 pm'].map(time => (
+                          <button 
+                            key={time} 
+                            className={`time-slot ${selectedTime === time ? 'active' : ''}`}
+                            onClick={() => handleTimeSelect(time)}
+                          >
+                            {time}
+                          </button>
+                        ))}
+                      </div>
+                    </>
+                  )}
+
+                  {bookingStep === 'details' && (
+                    <div style={{ padding: 24, flex: 1 }}>
+                      <button onClick={() => setBookingStep('calendar')} style={{ background: 'transparent', border: 'none', color: '#0ea5e9', cursor: 'pointer', marginBottom: 16 }}>← Back to Calendar</button>
+                      <h4 style={{ marginBottom: 16, fontSize: '1.1rem' }}>Enter Details</h4>
+                      <p style={{ color: 'var(--text-secondary)', marginBottom: 24, fontSize: '0.9rem' }}>
+                        May {selectedDate}, 2026 at {selectedTime}
+                      </p>
+                      <form onSubmit={handleBookingSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                        <div className="form-group" style={{ marginBottom: 0 }}>
+                          <label style={{ fontSize: '0.9rem', marginBottom: 8, display: 'block', color: 'var(--text-secondary)' }}>Full Name *</label>
+                          <input type="text" required value={bookingForm.name} onChange={e => setBookingForm({...bookingForm, name: e.target.value})} style={{ background: 'var(--bg-secondary)' }} />
+                        </div>
+                        <div className="form-group" style={{ marginBottom: 0 }}>
+                          <label style={{ fontSize: '0.9rem', marginBottom: 8, display: 'block', color: 'var(--text-secondary)' }}>Email Address *</label>
+                          <input type="email" required value={bookingForm.email} onChange={e => setBookingForm({...bookingForm, email: e.target.value})} style={{ background: 'var(--bg-secondary)' }} />
+                        </div>
+                        <button type="submit" className="btn btn-primary" style={{ marginTop: 16, width: '100%', padding: '14px 0' }}>Confirm Booking</button>
+                      </form>
+                    </div>
+                  )}
+
+                  {bookingStep === 'success' && (
+                    <div style={{ padding: '60px 24px', textAlign: 'center', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                      <div className="quote-success-icon" style={{ fontSize: 48, color: '#10b981', marginBottom: 16 }}>✓</div>
+                      <h3 style={{ fontSize: '1.5rem', marginBottom: 8 }}>Booking Confirmed!</h3>
+                      <p style={{ color: 'var(--text-secondary)' }}>A calendar invitation has been sent to {bookingForm.email}.</p>
+                      <button onClick={() => { setBookingStep('calendar'); setSelectedTime(null); setBookingForm({name: '', email: ''}); }} className="btn btn-secondary" style={{ marginTop: 32 }}>
+                        Book Another
+                      </button>
+                    </div>
+                  )}
                 </div>
               </div>
             </ScrollReveal>
