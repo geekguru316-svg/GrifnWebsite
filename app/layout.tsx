@@ -25,17 +25,34 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "GRIFN Software Solutions",
-              "image": "https://grifn-website.vercel.app/portfolio-1.png",
-              "@id": "https://grifn-website.vercel.app/",
+              "image": "https://grifn-website.vercel.app/logo.png",
               "url": "https://grifn-website.vercel.app/",
-              "telephone": "09178396962",
+              "telephone": "+63-32-123-4567",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "L. Gabuya Street, Cogon Pardo",
+                "streetAddress": "IT Park, Lahug",
                 "addressLocality": "Cebu City",
+                "addressRegion": "Central Visayas",
                 "postalCode": "6000",
-                "addressRegion": "Cebu",
                 "addressCountry": "PH"
+              },
+              "priceRange": "$$",
+              "openingHours": "Mo-Fr 09:00-18:00",
+              "sameAs": [
+                "https://www.facebook.com/grifnsoftware",
+                "https://www.linkedin.com/company/grifnsoftware"
+              ],
+              "serviceProvided": {
+                "@type": "Service",
+                "serviceType": "Web Design Cebu, Software Solutions Philippines, E-commerce Development",
+                "areaServed": {
+                  "@type": "Place",
+                  "name": "Philippines"
+                },
+                "provider": {
+                  "@type": "Organization",
+                  "name": "GRIFN Software Solutions"
+                }
               }
             })
           }}
