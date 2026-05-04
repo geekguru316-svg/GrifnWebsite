@@ -54,10 +54,20 @@ export default function QuoteForm({ onSuccess }: { onSuccess?: () => void }) {
       template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
       user_id: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '',
       template_params: {
-        ...form,
         from_name: form.name,
         reply_to: form.email,
-        subject: `New Quote Request from ${form.name}`
+        subject: `New Quote Request from ${form.name} — GRIFN`,
+        message: [
+          `Name: ${form.name}`,
+          `Email: ${form.email}`,
+          `Company: ${form.company || 'N/A'}`,
+          `Service: ${form.service}`,
+          `Budget: ${form.budget}`,
+          `Timeline: ${form.timeline}`,
+          ``,
+          `Project Description:`,
+          form.description,
+        ].join('\n'),
       }
     };
 

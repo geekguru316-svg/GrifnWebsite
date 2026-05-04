@@ -29,12 +29,18 @@ export default function Book() {
       template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
       user_id: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '',
       template_params: {
-        ...bookingForm,
-        selected_date: `May ${selectedDate}, 2026`,
-        selected_time: selectedTime || "",
         from_name: bookingForm.name,
         reply_to: bookingForm.email,
-        subject: `New Meeting Scheduled: May ${selectedDate} at ${selectedTime}`
+        subject: `New Meeting Booking — May ${selectedDate} at ${selectedTime} — GRIFN`,
+        message: [
+          `Name: ${bookingForm.name}`,
+          `Email: ${bookingForm.email}`,
+          ``,
+          `Meeting Details:`,
+          `Date: May ${selectedDate}, 2026`,
+          `Time: ${selectedTime} (GMT+8 Philippine Standard Time)`,
+          `Type: Discovery Call (15 min via Google Meet)`,
+        ].join('\n'),
       }
     };
 
