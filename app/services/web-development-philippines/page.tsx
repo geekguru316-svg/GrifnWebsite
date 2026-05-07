@@ -5,9 +5,9 @@ import Footer from '@/components/Footer';
 import '../services.css';
 
 export const metadata: Metadata = {
-  title: 'Web Development Philippines | Custom Software | GRIFN',
+  title: 'Software Solutions PH | Custom Web Development | GRIFN',
   description:
-    'Custom web development in the Philippines. GRIFN builds scalable web applications, SaaS platforms, and enterprise software using Next.js, React, and Node.js.',
+    'Enterprise-grade software solutions in the Philippines. GRIFN builds scalable web applications, SaaS platforms, and custom B2B portals using Next.js, React, and Node.js.',
   alternates: { canonical: '/services/web-development-philippines' },
 };
 
@@ -21,15 +21,15 @@ export default function WebDevelopmentPhilippines() {
           <div className="breadcrumb">
             <Link href="/">Home</Link> <span>/</span>
             <Link href="/#services">Services</Link> <span>/</span>
-            <span>Web Development Philippines</span>
+            <span>Software Solutions PH</span>
           </div>
           <h1>
-            Web Development Philippines | <span className="gradient-text">Custom Software</span>
+            Software Solutions PH | <span className="gradient-text">Custom Enterprise Apps</span>
           </h1>
           <p className="hero-desc">
-            From complex SaaS dashboards to custom business applications, GRIFN delivers production-grade
-            web development for Philippine businesses that need more than a template. We build software
-            that scales with your ambitions.
+            Stop relying on generic templates. GRIFN engineers robust, production-ready software solutions 
+            for Philippine businesses. From complex logistics dashboards to scalable B2B portals, we build 
+            custom web applications that automate your operations and drive real ROI.
           </p>
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
             <Link href="/quote" className="btn btn-primary">
@@ -46,26 +46,24 @@ export default function WebDevelopmentPhilippines() {
         <div className="container">
           <div className="service-body">
             <h2>
-              Enterprise-Grade <span className="gradient-text">Web Development</span> for Philippine Businesses
+              Enterprise-Grade <span className="gradient-text">Software Solutions</span> for the Philippines
             </h2>
             <p>
-              The Philippines is one of Southeast Asia&apos;s fastest-growing digital economies, and businesses
-              that invest in custom web development gain a massive competitive advantage. Off-the-shelf solutions
-              and WordPress plugins can only take you so far — when your business processes are unique, your
-              software should be too.
+              The Philippines is rapidly digitizing, and businesses that invest in proprietary software solutions 
+              gain an unassailable competitive advantage. Off-the-shelf software and basic WordPress plugins can only 
+              take you so far — when your internal processes, logistics, or customer workflows are unique, your 
+              technology stack should be too.
             </p>
             <p>
-              GRIFN specializes in building custom web applications using modern, battle-tested technologies:
-              Next.js for server-rendered performance, React for dynamic user interfaces, TypeScript for
-              code reliability, and Node.js for scalable backend architecture. Our tech stack is chosen
-              specifically for speed, maintainability, and SEO — giving your business a technical edge
-              that template-based solutions simply cannot match.
+              At GRIFN, we engineer custom software solutions utilizing the modern enterprise stack: 
+              <strong> Next.js & React</strong> for lightning-fast, highly interactive user interfaces, <strong>TypeScript</strong> for 
+              mission-critical code reliability, and scalable cloud architectures (Vercel, AWS) for the backend. 
+              We don&apos;t build brochures; we build high-performance web applications designed to solve complex business problems.
             </p>
             <p>
-              Whether you need a customer portal, an internal business tool, a logistics management platform,
-              or a full-scale SaaS product, we architect solutions that handle real-world scale. Our development
-              process includes rigorous testing, performance optimization, and security hardening — because
-              in the Philippines&apos; rapidly growing market, downtime means lost revenue.
+              Whether you need a massive multi-vendor e-commerce platform, a real-time logistics tracking system 
+              tailored to Philippine couriers, or a secure internal CRM, we architect software that handles real-world scale. 
+              Every solution undergoes rigorous automated testing, performance profiling, and security hardening to prevent data leaks and downtime.
             </p>
 
             <h2>

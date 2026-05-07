@@ -1,96 +1,141 @@
-'use client';
+import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import './quote.css';
 
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import ScrollReveal from '@/components/ScrollReveal';
-
-import QuoteForm from '@/components/QuoteForm';
+export const metadata: Metadata = {
+  title: 'Hire Us | Get a Free Quote | GRIFN Software Solutions',
+  description:
+    'Ready to build something extraordinary? Get a free, no-obligation quote from GRIFN Software Solutions. Web design, app development, and digital marketing in Cebu, Philippines.',
+  alternates: { canonical: '/quote' },
+};
 
 export default function QuotePage() {
-  const [submitted, setSubmitted] = useState(false);
-
-  if (submitted) {
-    return (
-      <div className="quote-page">
-        <nav className="navbar scrolled">
-          <div className="container">
-            <Link href="/" className="navbar-brand" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <Image src="/logo.png" alt="GRIFN Logo" width={54} height={54} style={{ objectFit: 'contain' }} />
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <span style={{ fontWeight: 800, fontSize: '22px', lineHeight: 1 }}>GRIFN</span>
-                <span style={{ fontWeight: 500, fontSize: '10px', opacity: 0.7, letterSpacing: '2px', marginTop: '2px' }}>SOFTWARE SOLUTIONS</span>
-              </div>
-            </Link>
-          </div>
-        </nav>
-
-        <section className="quote-hero">
-          <div className="container" style={{ textAlign: 'center', paddingTop: '160px', paddingBottom: '120px' }}>
-            <ScrollReveal>
-              <div className="quote-success-icon">✓</div>
-              <h1 className="section-title" style={{ marginTop: 24 }}>
-                Thank You<span className="gradient-text">!</span>
-              </h1>
-              <p className="section-subtitle" style={{ margin: '0 auto 40px', maxWidth: 480 }}>
-                We&apos;ve received your request. Our team will review your project
-                details and get back to you within 24 hours.
-              </p>
-              <Link href="/" className="btn btn-primary">
-                ← Back to Home
-              </Link>
-            </ScrollReveal>
-          </div>
-        </section>
-      </div>
-    );
-  }
-
   return (
     <div className="quote-page">
-      {/* Nav */}
-      <nav className="navbar scrolled">
-        <div className="container">
-          <Link href="/" className="navbar-brand" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <Image src="/logo.png" alt="GRIFN Logo" width={54} height={54} style={{ objectFit: 'contain' }} />
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <span style={{ fontWeight: 800, fontSize: '22px', lineHeight: 1 }}>GRIFN</span>
-              <span style={{ fontWeight: 500, fontSize: '10px', opacity: 0.7, letterSpacing: '2px', marginTop: '2px' }}>SOFTWARE SOLUTIONS</span>
-            </div>
-          </Link>
-          <ul className="navbar-links">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/#services">Services</Link></li>
-            <li><Link href="/#portfolio">Portfolio</Link></li>
-          </ul>
-        </div>
-      </nav>
-
-      {/* Header */}
+      <Navbar />
+      
       <section className="quote-hero">
         <div className="container">
-          <ScrollReveal>
-            <span className="section-label">Get a Quote</span>
-            <h1 className="section-title">
-              Tell Us About Your{' '}
-              <span className="gradient-text">Project</span>
-            </h1>
-            <p className="section-subtitle">
-              Fill out the form below and we&apos;ll get back to you within 24 hours
-              with a detailed proposal tailored to your needs.
-            </p>
-          </ScrollReveal>
+          <div className="quote-grid">
+            {/* Left Column: Info */}
+            <div className="quote-info">
+              <div>
+                <span className="section-label">Hire Us</span>
+                <h1>
+                  Let&apos;s Build Something <span className="gradient-text">Extraordinary</span>
+                </h1>
+                <p>
+                  Fill out the form with your project details, and our team will get back to you within 24 hours with a free, no-obligation technical assessment and pricing estimate.
+                </p>
+              </div>
+
+              <div className="contact-details">
+                <div className="contact-item">
+                  <div className="contact-icon">📧</div>
+                  <div className="contact-text">
+                    <h3>Email Us Directly</h3>
+                    <a href="mailto:geekguru316@gmail.com">geekguru316@gmail.com</a>
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <div className="contact-icon">📞</div>
+                  <div className="contact-text">
+                    <h3>Call or WhatsApp</h3>
+                    <a href="tel:+639178396962">+63 917 839 6962</a>
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <div className="contact-icon">📍</div>
+                  <div className="contact-text">
+                    <h3>Visit Our Studio</h3>
+                    <p>IT Park, Lahug, Cebu City 6000<br/>Philippines</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="trust-section">
+                <h3>Why Choose GRIFN?</h3>
+                <div className="trust-badges">
+                  <div className="trust-badge">⭐️ 5.0 Rating on Clutch</div>
+                  <div className="trust-badge">⚡ Next.js Experts</div>
+                  <div className="trust-badge">🇵🇭 100% Local Cebu Team</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Form */}
+            <div className="quote-form-container">
+              <form action="#" method="POST">
+                <div className="form-grid">
+                  <div className="form-group">
+                    <label htmlFor="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" className="form-control" placeholder="Juan" required />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" className="form-control" placeholder="Dela Cruz" required />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="email">Work Email *</label>
+                    <input type="email" id="email" name="email" className="form-control" placeholder="juan@company.com" required />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" className="form-control" placeholder="+63 912 345 6789" />
+                  </div>
+
+                  <div className="form-group full-width">
+                    <label htmlFor="service">What do you need help with? *</label>
+                    <select id="service" name="service" className="form-control" required>
+                      <option value="" disabled selected>Select a primary service</option>
+                      <option value="web-design">Web Design & Redesign</option>
+                      <option value="web-app">Custom Web Application</option>
+                      <option value="ecommerce">E-Commerce Store</option>
+                      <option value="seo">SEO & Digital Marketing</option>
+                      <option value="ui-ux">UI/UX Product Design</option>
+                      <option value="other">Other / Not Sure Yet</option>
+                    </select>
+                  </div>
+
+                  <div className="form-group full-width">
+                    <label htmlFor="budget">Estimated Budget Range</label>
+                    <select id="budget" name="budget" className="form-control">
+                      <option value="" disabled selected>Select a budget range (₱ PHP)</option>
+                      <option value="under-50k">Under ₱50,000</option>
+                      <option value="50k-150k">₱50,000 - ₱150,000</option>
+                      <option value="150k-300k">₱150,000 - ₱300,000</option>
+                      <option value="300k-plus">₱300,000+</option>
+                      <option value="to-be-determined">To be determined</option>
+                    </select>
+                  </div>
+
+                  <div className="form-group full-width">
+                    <label htmlFor="message">Project Details *</label>
+                    <textarea 
+                      id="message" 
+                      name="message" 
+                      className="form-control" 
+                      placeholder="Tell us about your business, your goals, and what you're looking to build..."
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <button type="submit" className="btn btn-primary submit-btn">
+                  Request Free Quote →
+                </button>
+                <p className="form-footer">
+                  🔒 Your information is completely confidential. We never spam.
+                </p>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Form */}
-      <section style={{ paddingBottom: 120 }}>
-        <div className="container">
-          <ScrollReveal delay={0.1}>
-            <QuoteForm onSuccess={() => setSubmitted(true)} />
-          </ScrollReveal>
-        </div>
-      </section>
+      <Footer />
     </div>
   );
 }
