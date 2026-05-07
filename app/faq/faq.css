@@ -1,0 +1,128 @@
+.faq-page {
+  padding-top: var(--nav-height);
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.faq-hero {
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.faq-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 20px;
+}
+
+.faq-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.faq-content {
+  padding-bottom: 100px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-accordion {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-accordion:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(6, 182, 212, 0.2);
+}
+
+.faq-accordion summary {
+  padding: 24px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  user-select: none;
+}
+
+.faq-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-accordion summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: var(--accent-light);
+  transition: transform 0.3s ease;
+}
+
+.faq-accordion[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 24px 24px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.faq-answer p {
+  margin-bottom: 16px;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-answer strong {
+  color: var(--text-primary);
+}
+
+.faq-category-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-light);
+  margin: 40px 0 20px;
+  display: block;
+}
+
+.faq-cta {
+  margin-top: 60px;
+  padding: 60px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.faq-cta h2 {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .faq-hero {
+    padding: 60px 0 40px;
+  }
+  .faq-accordion summary {
+    padding: 20px;
+    font-size: 1rem;
+  }
+  .faq-answer {
+    padding: 0 20px 20px;
+  }
+}

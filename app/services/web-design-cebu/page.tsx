@@ -67,7 +67,14 @@ export default function WebDesignCebu() {
               We specialize in designing for the Philippine market. That means understanding local buying
               behavior, mobile-first browsing habits (over 95% of Filipino internet users access the web
               via mobile), and the cultural nuances that influence trust and purchasing decisions in Cebu
-              and across the Visayas region.
+              and across the Visayas region. A website that works in the US may not work in Cebu — we bridge
+              that gap with localized UX research and data-driven design.
+            </p>
+            <p>
+              Furthermore, professional web design is the foundation of your Local SEO. Google rewards websites
+              that provide a superior user experience, fast load speeds, and high-quality content. By investing
+              in a premium design today, you&apos;re setting your business up for long-term visibility in the 
+              Cebuano and national Philippine markets.
             </p>
 
             <h2>
@@ -82,7 +89,13 @@ export default function WebDesignCebu() {
             <p>
               Our design process is collaborative and transparent. You&apos;ll see wireframes, prototypes, and
               design concepts before a single line of code is written. We iterate based on your feedback until
-              the design perfectly represents your brand and business objectives.
+              the design perfectly represents your brand and business objectives. We don&apos;t just hand over a site; 
+              we ensure it&apos;s a high-performance tool that grows with your business.
+            </p>
+            <p>
+              Finally, we conduct rigorous testing across all devices and browsers, ensuring that whether your 
+              customer is on a flagship iPhone in IT Park or a budget Android in Mactan, they have a seamless, 
+              fast experience that reflects your business&apos;s professionalism.
             </p>
           </div>
 
