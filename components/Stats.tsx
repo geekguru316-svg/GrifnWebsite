@@ -4,7 +4,7 @@ const stats = [
   { value: '150+', label: 'Projects Delivered' },
   { value: '98%', label: 'Client Satisfaction' },
   { value: '8+', label: 'Years Experience' },
-  { value: '30+', label: 'Team Members' },
+  { value: '10+', label: 'Team Members' },
 ];
 
 export default function Stats() {

@@ -94,7 +94,7 @@ export default function About() {
               <div className="label">Years Experience</div>
             </div>
             <div className="about-stat">
-              <div className="number">30+</div>
+              <div className="number">10+</div>
               <div className="label">Team Members</div>
             </div>
           </div>
