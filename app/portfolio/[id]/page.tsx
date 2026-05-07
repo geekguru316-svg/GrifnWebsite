@@ -3,6 +3,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ScrollReveal from '@/components/ScrollReveal';
 
+export async function generateStaticParams() {
+  return [
+    { id: 'cebu-artisan-collective' },
+    { id: 'mactan-logistics-pro' },
+    { id: 'metro-cebu-real-estate' },
+  ];
+}
+
 const caseStudies = {
   'cebu-artisan-collective': {
     title: 'Cebu Artisan Collective',
@@ -39,7 +47,7 @@ const caseStudies = {
   },
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   const resolvedParams = await params;
   const study = caseStudies[resolvedParams.id as keyof typeof caseStudies];
   
@@ -54,7 +62,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   };
 }
 
-export default async function CaseStudyPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function CaseStudyPage({ params }: any) {
   const resolvedParams = await params;
   const id = resolvedParams.id;
   const study = caseStudies[id as keyof typeof caseStudies];
