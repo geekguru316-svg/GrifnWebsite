@@ -39,8 +39,9 @@ const caseStudies = {
   },
 };
 
-export function generateMetadata({ params }: { params: { id: string } }): Metadata {
-  const study = caseStudies[params.id as keyof typeof caseStudies];
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const study = caseStudies[resolvedParams.id as keyof typeof caseStudies];
   
   if (!study) {
     return { title: 'Portfolio Project Not Found | GRIFN' };
@@ -53,8 +54,9 @@ export function generateMetadata({ params }: { params: { id: string } }): Metada
   };
 }
 
-export default function CaseStudyPage({ params }: { params: { id: string } }) {
-  const id = params.id;
+export default async function CaseStudyPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const id = resolvedParams.id;
   const study = caseStudies[id as keyof typeof caseStudies];
 
   if (!study) {
