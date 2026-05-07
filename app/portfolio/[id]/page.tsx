@@ -1,6 +1,4 @@
-'use client';
-
-import { useParams } from 'next/navigation';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -35,9 +33,22 @@ const caseStudies = {
   },
 };
 
-export default function CaseStudyPage() {
-  const params = useParams();
-  const id = params.id as string;
+export function generateMetadata({ params }: { params: { id: string } }): Metadata {
+  const study = caseStudies[params.id as keyof typeof caseStudies];
+  
+  if (!study) {
+    return { title: 'Portfolio Project Not Found | GRIFN' };
+  }
+
+  return {
+    title: `${study.title} Case Study | GRIFN Software Solutions`,
+    description: `Read how we built the ${study.title} platform and achieved ${study.metrics.join(', ')}.`,
+    alternates: { canonical: `/portfolio/${params.id}` }
+  };
+}
+
+export default function CaseStudyPage({ params }: { params: { id: string } }) {
+  const id = params.id;
   const study = caseStudies[id as keyof typeof caseStudies];
 
   if (!study) {
