@@ -19,7 +19,14 @@ export default function Stats() {
                 <div className="stat-label">{s.label}</div>
                 {s.label === 'Team Members' && (
                   <div className="avatar-group">
-                    <img src="/team/arjun.jpg" alt="Arjun" className="avatar-mini" />
+                    <div 
+                      className="avatar-mini" 
+                      style={{ 
+                        backgroundImage: 'url(/team/arjun.jpg)', 
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                      }} 
+                    />
                     <div className="avatar-mini">CG</div>
                     <div className="avatar-mini">GA</div>
                     <div className="avatar-mini">+7</div>

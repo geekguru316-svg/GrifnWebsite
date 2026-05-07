@@ -197,7 +197,15 @@ export default function About() {
             <h2>Meet the <span className="gradient-text">Team</span></h2>
             <div className="team-grid">
               <div className="team-card">
-                <div className="team-avatar">AH</div>
+                <div 
+                  className="team-avatar" 
+                  style={{ 
+                    backgroundImage: 'url(/team/arjun.jpg)', 
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                >
+                </div>
                 <h3>Arjun Haincadto</h3>
                 <div className="role">Founder & Lead Dev</div>
                 <p>Full-stack developer with 8+ years experience building scalable web apps.</p>
