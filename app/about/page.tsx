@@ -15,8 +15,8 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "GRIFN Software Solutions",
-  image: "https://grifn.dev/logo.png",
-  url: "https://grifn.dev/about",
+  image: "https://grifn-website.vercel.app/logo.png",
+  url: "https://grifn-website.vercel.app/about",
   telephone: "+639178396962",
   address: {
     "@type": "PostalAddress",

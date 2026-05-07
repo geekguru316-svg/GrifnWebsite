@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllSlugs } from '@/lib/blog-data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://grifn.dev';
+  const baseUrl = 'https://grifn-website.vercel.app';
 
   const servicePages = [
     'web-design-cebu',

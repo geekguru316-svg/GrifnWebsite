@@ -45,8 +45,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "GRIFN Software Solutions",
-  url: "https://grifn.dev",
-  logo: "https://grifn.dev/logo.png",
+  url: "https://grifn-website.vercel.app",
+  logo: "https://grifn-website.vercel.app/logo.png",
   description:
     "GRIFN Software Solutions is a premium software studio crafting high-performance websites, web apps, and digital experiences that drive real business results.",
   email: "hello@grifn.dev",
@@ -151,7 +151,7 @@ export const metadata: Metadata = {
   title: "Web Design Cebu | GRIFN Software Solutions",
   description:
     "Premium web design in Cebu. GRIFN Software Solutions crafts high-performance websites and digital experiences that drive real business results. Get your free quote today.",
-  metadataBase: new URL("https://grifn.dev"),
+  metadataBase: new URL("https://grifn-website.vercel.app"),
   alternates: {
     canonical: "/",
   },

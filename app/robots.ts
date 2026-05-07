@@ -1,14 +1,12 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://grifn.dev';
-
   return {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/_next/'],
+      disallow: '/private/',
     },
-    sitemap: `${baseUrl}/sitemap.xml`,
-  };
+    sitemap: 'https://grifn-website.vercel.app/sitemap.xml',
+  }
 }
