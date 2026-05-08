@@ -257,7 +257,15 @@ export default function About() {
                 <p>Specializing in premium UI/UX design for Philippine and international brands.</p>
               </div>
               <div className="team-card">
-                <div className="team-avatar">GA</div>
+                <div 
+                  className="team-avatar" 
+                  style={{ 
+                    backgroundImage: 'url(/team/glenda-agnes.png)', 
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                >
+                </div>
                 <h3>Glenda Agnes</h3>
                 <div className="role">Head of Strategy</div>
                 <p>Digital strategist focused on SEO and growth for businesses in Cebu.</p>

@@ -52,7 +52,7 @@ const organizationSchema = {
   logo: "https://grifn-website.vercel.app/logo.png",
   description:
     "GRIFN Software Solutions is a premium software studio crafting high-performance websites, web apps, and digital experiences that drive real business results.",
-  email: "hello@grifn.dev",
+  email: "ga.creations101@gmail.com",
   telephone: "+639178396962",
   foundingDate: "2024",
   sameAs: [

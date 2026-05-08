@@ -39,11 +39,23 @@ export default function BlogIndex() {
                 <h2>{post.title}</h2>
                 <p className="blog-excerpt">{post.excerpt}</p>
                 <div className="blog-meta">
-                  <span>{post.author}</span>
-                  <span>·</span>
+                  <div className="author-info">
+                    {post.authorImage ? (
+                      <div 
+                        className="author-avatar-sm" 
+                        style={{ 
+                          backgroundImage: `url(${post.authorImage})`,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center'
+                        }}
+                      ></div>
+                    ) : (
+                      <div className="author-avatar-sm initials">{post.authorInitials}</div>
+                    )}
+                    <span>{post.author}</span>
+                  </div>
+                  <span className="meta-divider">·</span>
                   <span>{post.date}</span>
-                  <span>·</span>
-                  <span>{post.readingTime}</span>
                 </div>
               </Link>
             ))}

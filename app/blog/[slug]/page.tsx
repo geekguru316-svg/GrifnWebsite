@@ -109,7 +109,18 @@ export default async function BlogPost({ params }: Props) {
           <h1>{post.title}</h1>
           <div className="article-meta">
             <div className="author">
-              <div className="author-avatar">{post.authorInitials}</div>
+              {post.authorImage ? (
+                <div 
+                  className="author-avatar" 
+                  style={{ 
+                    backgroundImage: `url(${post.authorImage})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                ></div>
+              ) : (
+                <div className="author-avatar">{post.authorInitials}</div>
+              )}
               <span>{post.author}</span>
             </div>
             <span className="divider">·</span>

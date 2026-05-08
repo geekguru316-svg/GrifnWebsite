@@ -48,7 +48,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Contact</h4>
             <ul>
-              <li><EmailLink email="geekguru316@gmail.com" /></li>
+              <li><EmailLink email="ga.creations101@gmail.com" /></li>
               <li><a href="tel:+639178396962">+63 917 839 6962</a></li>
             </ul>
           </div>

@@ -36,7 +36,7 @@ export default function QuotePage() {
                   <div className="contact-icon">📧</div>
                   <div className="contact-text">
                     <h3>Email Us Directly</h3>
-                    <EmailLink email="geekguru316@gmail.com" />
+                    <EmailLink email="ga.creations101@gmail.com" />
                   </div>
                 </div>
                 <div className="contact-item">

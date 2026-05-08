@@ -5,6 +5,7 @@ export interface BlogPost {
   date: string;
   author: string;
   authorInitials: string;
+  authorImage?: string;
   readingTime: string;
   tag: string;
   excerpt: string;
@@ -20,6 +21,7 @@ export const blogPosts: BlogPost[] = [
     date: 'May 5, 2026',
     author: 'Arjun Haincadto',
     authorInitials: 'AH',
+    authorImage: '/team/arjun-headshot.png',
     readingTime: '10 min read',
     tag: 'Pricing Guide',
     excerpt:
@@ -63,6 +65,7 @@ export const blogPosts: BlogPost[] = [
     date: 'May 3, 2026',
     author: 'Glenda Agnes',
     authorInitials: 'GA',
+    authorImage: '/team/glenda-agnes.png',
     readingTime: '7 min read',
     tag: 'Business Guide',
     excerpt:
