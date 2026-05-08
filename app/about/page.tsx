@@ -200,7 +200,7 @@ export default function About() {
                 <div 
                   className="team-avatar" 
                   style={{ 
-                    backgroundImage: 'url(/team/arjun.jpg)', 
+                    backgroundImage: 'url(/team/arjun-headshot.png)', 
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
