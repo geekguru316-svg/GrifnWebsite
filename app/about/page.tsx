@@ -124,38 +124,28 @@ export default function About() {
       {/* CFO's Message — Glenda Agnes */}
       <section className="founder-section" style={{ background: 'var(--bg-secondary)' }}>
         <div className="container">
-          <div className="founder-grid" style={{ direction: 'rtl' }}>
-            <ScrollReveal direction="right">
-              <div className="founder-image-container" style={{ direction: 'ltr' }}>
-                <div className="founder-image-bg"></div>
-                <img
-                  src="/team/glenda-agnes.png"
-                  alt="Glenda Agnes - CFO & Head of Strategy at GRIFN"
-                  className="founder-image"
-                  style={{ objectPosition: 'top center' }}
-                />
-              </div>
-            </ScrollReveal>
+          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '80px', alignItems: 'center' }}>
 
+            {/* LEFT: Text content */}
             <ScrollReveal direction="left">
-              <div className="founder-content" style={{ direction: 'ltr' }}>
-                <span className="section-label" style={{ marginBottom: 16 }}>Message from our CFO & Head of Strategy</span>
+              <div className="founder-content">
+                <span className="section-label" style={{ marginBottom: 16 }}>Message from our CFO &amp; Head of Strategy</span>
                 <h2>Growing Businesses <br/><span className="gradient-text">Through Smart Strategy</span></h2>
                 <div className="founder-letter">
                   <p>
-                    At GRIFN, strategy isn&apos;t an afterthought — it&apos;s the foundation of everything we 
-                    build. My role is to ensure that every peso our clients invest in their digital 
+                    At GRIFN, strategy isn&apos;t an afterthought — it&apos;s the foundation of everything we
+                    build. My role is to ensure that every peso our clients invest in their digital
                     presence delivers measurable, sustainable returns.
                   </p>
                   <p>
-                    I&apos;ve seen too many businesses pour resources into beautiful websites that simply 
-                    don&apos;t perform. That&apos;s why I work closely with every client to align their digital 
-                    roadmap with their core business objectives — from growth targets to market 
+                    I&apos;ve seen too many businesses pour resources into beautiful websites that simply
+                    don&apos;t perform. That&apos;s why I work closely with every client to align their digital
+                    roadmap with their core business objectives — from growth targets to market
                     positioning and long-term brand equity.
                   </p>
                   <p>
-                    Whether you&apos;re a startup finding your footing or an established enterprise ready 
-                    to scale, we&apos;re here to be the strategic partner that helps you grow with clarity 
+                    Whether you&apos;re a startup finding your footing or an established enterprise ready
+                    to scale, we&apos;re here to be the strategic partner that helps you grow with clarity
                     and confidence. At GRIFN, your success is the only metric that matters.
                   </p>
                 </div>
@@ -165,9 +155,24 @@ export default function About() {
                 </div>
               </div>
             </ScrollReveal>
+
+            {/* RIGHT: Glenda's Photo */}
+            <ScrollReveal direction="right">
+              <div className="founder-image-container">
+                <div className="founder-image-bg"></div>
+                <img
+                  src="/team/glenda-agnes.png"
+                  alt="Glenda Agnes - CFO and Head of Strategy at GRIFN"
+                  className="founder-image"
+                  style={{ objectPosition: 'top center' }}
+                />
+              </div>
+            </ScrollReveal>
+
           </div>
         </div>
       </section>
+
 
       {/* Stats */}
       <section className="stats-section" style={{ padding: '0 0 80px' }}>
