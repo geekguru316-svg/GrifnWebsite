@@ -179,6 +179,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
+  verification: {
+    google: "cAw0SeUoGVv0Hq8Yf9qTnflX8uaiTn0WbxlyUuoxzUs",
+  },
 };
 
 // ─── Root Layout ──────────────────────────────────────────────────────────────
