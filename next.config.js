@@ -9,10 +9,7 @@ const nextConfig = {
     minimumCacheTTL: 60,
   },
 
-  // Features that leverage HTTP/2 streaming
-  cacheComponents: true, // Moved from experimental in Next.js 16.x
-
-  // Keep existing note: Redirect removed until a custom domain is purchased
+  // Redirect removed until a custom domain is purchased
 };
 
 module.exports = nextConfig;

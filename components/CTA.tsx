@@ -8,12 +8,10 @@ export default function CTA() {
         <ScrollReveal>
           <span className="section-label">Let&apos;s Talk</span>
           <h2 className="section-title">
-            Get a Free Web Design{' '}
-            <span className="gradient-text">Quote in Cebu</span>
+            Get My Quote: Premium <span className="gradient-text">Software Solutions Cebu</span>
           </h2>
           <p className="section-subtitle">
-            Let&apos;s build something extraordinary together. Get in touch and
-            let&apos;s discuss how we can bring your vision to life.
+            Ready to transform your business with world-class web design and custom software solutions? Get my quote today and let&apos;s discuss how GRIFN can help you scale in the Philippines market. We provide detailed project breakdowns and transparent ROI-focused strategies for every client in Cebu.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center' }}>
             <Link href="/quote" className="btn btn-primary">

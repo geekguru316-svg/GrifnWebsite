@@ -16,14 +16,14 @@ export default function Hero() {
 
           <ScrollReveal delay={0.1}>
             <h1 className="hero-title">
-              Elevate Your Business with Premium{' '}
+              Software Solutions & Premium{' '}
               <span className="gradient-text">Web Design Cebu</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="hero-subtitle">
-              Helping Cebu&apos;s growing SMEs and Philippines&apos; ambitious brands scale with high-performance websites and ROI-focused software solutions. 
-              Turn your online presence into a 24/7 revenue asset.
+              GRIFN is a premier software solutions studio in the Philippines. We help Cebu&apos;s growing SMEs and Philippines&apos; ambitious brands scale with high-performance websites, custom web applications, and ROI-focused software solutions. 
+              Our team of experts in Cebu specializes in turning your online presence into a 24/7 revenue asset through superior UI/UX design and technical excellence.
             </p>
           </ScrollReveal>
 

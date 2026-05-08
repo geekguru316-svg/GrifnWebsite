@@ -150,17 +150,17 @@ const faqSchema = {
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Web Design Cebu | GRIFN Software Solutions",
+  title: "Software Solutions & Web Design Cebu | GRIFN Philippines",
   description:
-    "Premium web design in Cebu. GRIFN Software Solutions crafts high-performance websites and digital experiences that drive real business results. Get your free quote today.",
+    "Premium software solutions and web design in Cebu. GRIFN crafts high-performance UI/UX design, web apps, and digital case studies that drive real business results in the Philippines. Get your free quote today.",
   metadataBase: new URL("https://grifn-website.vercel.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Web Design Cebu | GRIFN Software Solutions",
+    title: "Software Solutions & Web Design Cebu | GRIFN Philippines",
     description:
-      "Premium web design, development, and digital strategy for ambitious brands in Cebu and the Philippines. We build websites that convert.",
+      "Premium software solutions, web design, and UI/UX strategy for ambitious brands in Cebu and the Philippines. We build websites and digital case studies that convert.",
     url: "https://grifn.dev",
     siteName: "GRIFN Software Solutions",
     images: [{ url: "/og-banner.png", width: 1200, height: 630, alt: "GRIFN Software Solutions — Web Design Cebu Philippines" }],
@@ -168,9 +168,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design Cebu | GRIFN Software Solutions",
+    title: "Software Solutions & Web Design Cebu | GRIFN Philippines",
     description:
-      "Premium web design, development, and digital strategy for ambitious brands in Cebu and the Philippines.",
+      "Premium software solutions, web design, and UI/UX strategy for ambitious brands in Cebu and the Philippines. Expert digital case studies.",
     images: ["/og-banner.png"],
   },
 

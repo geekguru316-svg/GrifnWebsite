@@ -35,10 +35,10 @@ export default function Portfolio() {
         <ScrollReveal>
           <span className="section-label">Our Work</span>
           <h2 className="section-title">
-            Web Design Portfolio — <span className="gradient-text">Cebu & Philippines Projects</span>
+            Web Design & <span className="gradient-text">Software Case Studies</span>
           </h2>
           <p className="section-subtitle">
-            Real-world results for Cebu businesses. Each project is a case study in driving revenue and digital growth.
+            Explore our portfolio of successful software solutions and web design projects across Cebu and the Philippines. Each project is a detailed case study in driving business ROI and digital transformation for our local partners.
           </p>
         </ScrollReveal>
 
