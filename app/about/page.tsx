@@ -138,7 +138,7 @@ export default function About() {
                     presence delivers measurable, sustainable returns.
                   </p>
                   <p>
-                    As a graduate of Computer Science, former programming instructor, HR manager, and Outstanding Cebuano Youth Leader awardee in 2000
+                    As a graduate of Computer Science, former programming instructor, HR manager, and Outstanding Cebuano Youth Leader awardee in 2000, 
                     I bring a unique combination of technical expertise, leadership, and people-focused
                     strategy into every project. My background has given me the ability to bridge
                     technology with real business needs — helping teams, brands, and organizations
