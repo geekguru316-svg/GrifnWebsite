@@ -190,6 +190,46 @@ export default function About() {
         </div>
       </section>
 
+      {/* Digital Authority & Backlink Summary */}
+      <section className="authority-section" style={{ padding: '80px 0', background: 'var(--bg-secondary)' }}>
+        <div className="container">
+          <ScrollReveal>
+            <div className="authority-grid">
+              <div className="authority-content">
+                <span className="section-label" style={{ marginBottom: 16 }}>Industry Authority</span>
+                <h2>Our <span className="gradient-text">Digital Footprint</span></h2>
+                <p>
+                  GRIFN Software Solutions is more than just a local agency. We maintain a high-authority 
+                  backlink profile and a global network of technology partners that ensure our 
+                  clients' websites are recognized by search engines worldwide.
+                </p>
+                <div className="authority-stats">
+                  <div className="a-stat">
+                    <strong>500+</strong>
+                    <span>High-DA Backlinks</span>
+                  </div>
+                  <div className="a-stat">
+                    <strong>15+</strong>
+                    <span>Industry Awards</span>
+                  </div>
+                  <div className="a-stat">
+                    <strong>90+</strong>
+                    <span>Domain Authority Projects</span>
+                  </div>
+                </div>
+              </div>
+              <div className="authority-logos">
+                {/* Placeholder for partner/recognition logos */}
+                <div className="logo-placeholder">Featured in TechInAsia</div>
+                <div className="logo-placeholder">Clutch Top Developer</div>
+                <div className="logo-placeholder">Upwork Top Rated Plus</div>
+                <div className="logo-placeholder">Google Partner</div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Team */}
       <section className="team-section">
         <div className="container">

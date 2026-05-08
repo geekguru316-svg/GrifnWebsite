@@ -1,0 +1,25 @@
+# GRIFN Software Solutions
+
+GRIFN is a premium software studio based in Cebu, Philippines, specializing in high-performance web design, development, and digital strategy.
+
+## Key Information
+- **Location:** IT Park, Lahug, Cebu City, Philippines
+- **Services:** Web Design, Web Development, E-commerce, UI/UX Strategy, SEO & Performance Optimization.
+- **Core Technologies:** Next.js, React, TypeScript, Node.js, Three.js, Framer Motion.
+- **Founder:** Arjun Haincadto
+- **Target Market:** Businesses in Cebu, Philippines, and global clients seeking premium digital experiences.
+
+## Our Approach
+We focus on "Results First" — building websites that aren't just visually stunning but also drive leads, sales, and real business growth. Every project includes foundational SEO, structured data (JSON-LD), and Core Web Vitals optimization.
+
+## Links
+- [Home](https://grifn.dev/)
+- [About Us](https://grifn.dev/about)
+- [Portfolio](https://grifn.dev/#portfolio)
+- [Pricing](https://grifn.dev/pricing)
+- [Get a Quote](https://grifn.dev/quote)
+
+## Contact
+- **Website:** https://grifn.dev
+- **Facebook:** https://www.facebook.com/profile.php?id=61588838560417
+- **LinkedIn:** https://www.linkedin.com/company/grifn-software-solutions/

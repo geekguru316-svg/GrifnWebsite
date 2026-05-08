@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import EmailLink from '@/components/EmailLink';
 import './quote.css';
 
 export const metadata: Metadata = {
@@ -35,7 +36,7 @@ export default function QuotePage() {
                   <div className="contact-icon">📧</div>
                   <div className="contact-text">
                     <h3>Email Us Directly</h3>
-                    <a href="mailto:geekguru316@gmail.com">geekguru316@gmail.com</a>
+                    <EmailLink email="geekguru316@gmail.com" />
                   </div>
                 </div>
                 <div className="contact-item">
