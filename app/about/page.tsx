@@ -81,9 +81,9 @@ export default function About() {
             <ScrollReveal direction="left">
               <div className="founder-image-container">
                 <div className="founder-image-bg"></div>
-                <img 
-                  src="/team/arjun.jpg" 
-                  alt="Arjun Haincadto - Founder of GRIFN" 
+                <img
+                  src="/team/arjun.jpg"
+                  alt="Arjun Haincadto - Founder of GRIFN"
                   className="founder-image"
                 />
               </div>
@@ -92,22 +92,22 @@ export default function About() {
             <ScrollReveal direction="right">
               <div className="founder-content">
                 <span className="section-label" style={{ marginBottom: 16 }}>Message from our Founder</span>
-                <h2>Building the Future <br/><span className="gradient-text">of Work in Cebu</span></h2>
+                <h2>Building the Future <br /><span className="gradient-text">of Work in Cebu</span></h2>
                 <div className="founder-letter">
                   <p>
-                    When I founded GRIFN Software Solutions in 2024, I saw a clear gap in the market. 
-                    Cebu was filled with talented developers and ambitious businesses, yet most 
+                    When I founded GRIFN Software Solutions in 2024, I saw a clear gap in the market.
+                    Cebu was filled with talented developers and ambitious businesses, yet most
                     local companies were stuck with template websites that didn&apos;t convert.
                   </p>
                   <p>
-                    I believed Cebu deserved a homegrown digital studio that combined international 
-                    design standards with deep local market knowledge. A team that understood both 
-                    the technical sophistication of global tech hubs and the cultural nuances of 
+                    I believed Cebu deserved a homegrown digital studio that combined international
+                    design standards with deep local market knowledge. A team that understood both
+                    the technical sophistication of global tech hubs and the cultural nuances of
                     doing business in the Philippines.
                   </p>
                   <p>
-                    Today, we treat every project as a partnership, not a transaction. We succeed 
-                    when our clients succeed. Our goal isn&apos;t just to build software—it&apos;s to build 
+                    Today, we treat every project as a partnership, not a transaction. We succeed
+                    when our clients succeed. Our goal isn&apos;t just to build software—it&apos;s to build
                     assets that drive real growth for our community.
                   </p>
                 </div>
@@ -130,7 +130,7 @@ export default function About() {
             <ScrollReveal direction="left">
               <div className="founder-content">
                 <span className="section-label" style={{ marginBottom: 16 }}>Message from our CFO &amp; Head of Strategy</span>
-                <h2>Growing Businesses <br/><span className="gradient-text">Through Smart Strategy</span></h2>
+                <h2>Growing Businesses <br /><span className="gradient-text">Through Smart Strategy</span></h2>
                 <div className="founder-letter">
                   <p>
                     At GRIFN, strategy isn&apos;t an afterthought — it&apos;s the foundation of everything we
@@ -138,10 +138,10 @@ export default function About() {
                     presence delivers measurable, sustainable returns.
                   </p>
                   <p>
-                    As a graduate of Computer Science, former programming instructor, and HR manager, 
-                    I bring a unique combination of technical expertise, leadership, and people-focused 
-                    strategy into every project. My background has given me the ability to bridge 
-                    technology with real business needs — helping teams, brands, and organizations 
+                    As a graduate of Computer Science, former programming instructor, HR manager, and Outstanding Cebuano Youth Leader awardee in 2000
+                    I bring a unique combination of technical expertise, leadership, and people-focused
+                    strategy into every project. My background has given me the ability to bridge
+                    technology with real business needs — helping teams, brands, and organizations
                     grow with purpose, efficiency, and long-term vision.
                   </p>
                   <p>
@@ -259,8 +259,8 @@ export default function About() {
                 <span className="section-label" style={{ marginBottom: 16 }}>Industry Authority</span>
                 <h2>Our <span className="gradient-text">Digital Footprint</span></h2>
                 <p>
-                  GRIFN Software Solutions is more than just a local agency. We maintain a high-authority 
-                  backlink profile and a global network of technology partners that ensure our 
+                  GRIFN Software Solutions is more than just a local agency. We maintain a high-authority
+                  backlink profile and a global network of technology partners that ensure our
                   clients' websites are recognized by search engines worldwide.
                 </p>
                 <div className="authority-stats">
@@ -297,10 +297,10 @@ export default function About() {
             <h2>Meet the <span className="gradient-text">Team</span></h2>
             <div className="team-grid">
               <div className="team-card">
-                <div 
-                  className="team-avatar" 
-                  style={{ 
-                    backgroundImage: 'url(/team/arjun-headshot.png)', 
+                <div
+                  className="team-avatar"
+                  style={{
+                    backgroundImage: 'url(/team/arjun-headshot.png)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
@@ -317,10 +317,10 @@ export default function About() {
                 <p>Specializing in premium UI/UX design for Philippine and international brands.</p>
               </div>
               <div className="team-card">
-                <div 
-                  className="team-avatar" 
-                  style={{ 
-                    backgroundImage: 'url(/team/glenda-agnes.png)', 
+                <div
+                  className="team-avatar"
+                  style={{
+                    backgroundImage: 'url(/team/glenda-agnes.png)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
