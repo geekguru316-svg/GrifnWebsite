@@ -210,12 +210,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
+        <GoogleAnalytics gaId="G-7W1TVY00LK" />
       </head>
       <body className={inter.className}>
         {children}
         <Analytics />
         <SpeedInsights />
-        <GoogleAnalytics gaId="G-7W1TVY00LK" />
       </body>
     </html>
   );
