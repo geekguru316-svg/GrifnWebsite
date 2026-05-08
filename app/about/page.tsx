@@ -138,6 +138,13 @@ export default function About() {
                     presence delivers measurable, sustainable returns.
                   </p>
                   <p>
+                    As a graduate of Computer Science, former programming instructor, and HR manager,
+                    I bring a unique combination of technical expertise, leadership, and people-focused
+                    strategy into every project. My background has given me the ability to bridge
+                    technology with real business needs — helping teams, brands, and organizations grow
+                    with purpose, efficiency, and long-term vision.
+                  </p>
+                  <p>
                     I&apos;ve seen too many businesses pour resources into beautiful websites that simply
                     don&apos;t perform. That&apos;s why I work closely with every client to align their digital
                     roadmap with their core business objectives — from growth targets to market
