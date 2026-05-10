@@ -1,0 +1,178 @@
+/* ======================================================
+   GRIFN COMPANY PROFILE — Premium Document Styles
+   ====================================================== */
+
+.profile-container {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Page / Slide System */
+.profile-page {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.profile-page-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Number */
+.pnum {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-family: monospace;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--text-tertiary);
+  z-index: 10;
+}
+
+/* Headings */
+.display-title {
+  font-size: clamp(48px, 8vw, 84px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+}
+
+.display-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent-light);
+}
+
+/* Section Header Bar */
+.profile-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 48px;
+  border-bottom: 1px solid var(--border-subtle);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.profile-bar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-bar-section {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+/* Cover Specifics */
+.pg-cover {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cover-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+/* Layout Splits */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+}
+
+.split-left {
+  padding: 80px 60px;
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.split-right {
+  padding: 80px 60px;
+  background: rgba(255, 255, 255, 0.01);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Stats Grid for Profile */
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.pstat-card {
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.pstat-num {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--accent-light);
+  line-height: 1;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.pstat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-tertiary);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .split-layout {
+    grid-template-columns: 1fr;
+  }
+  .split-left {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .profile-bar {
+    padding: 24px;
+  }
+  .display-title {
+    font-size: 48px;
+  }
+}
+
+@media print {
+  .profile-page {
+    page-break-after: always;
+  }
+  .profile-bar {
+    position: static;
+  }
+}
