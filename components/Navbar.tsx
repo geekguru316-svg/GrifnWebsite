@@ -25,7 +25,6 @@ export default function Navbar() {
         </Link>
         <ul className="navbar-links">
           <li><a href="/#services">Services</a></li>
-          <li><Link href="/pricing">Pricing</Link></li>
           <li><Link href="/faq">FAQ</Link></li>
           <li><a href="/#portfolio">Portfolio</a></li>
           <li><Link href="/about">About</Link></li>
