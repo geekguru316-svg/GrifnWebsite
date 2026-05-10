@@ -113,7 +113,7 @@ export default function About() {
                 </div>
                 <div className="founder-signature">
                   <div className="founder-name">Arjun Haincadto</div>
-                  <div className="founder-title">Founder & Lead Developer</div>
+                  <div className="founder-title">Founder & Lead President</div>
                 </div>
               </div>
             </ScrollReveal>
@@ -124,12 +124,12 @@ export default function About() {
       {/* CFO's Message — Glenda Agnes */}
       <section className="founder-section" style={{ background: 'var(--bg-secondary)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '80px', alignItems: 'center' }}>
+          <div className="founder-grid-reversed">
 
             {/* LEFT: Text content */}
             <ScrollReveal direction="left">
               <div className="founder-content">
-                <span className="section-label" style={{ marginBottom: 16 }}>Message from our CFO &amp; Head of Strategy</span>
+                <span className="section-label" style={{ marginBottom: 16 }}>Message from our VP for Finance and Admin</span>
                 <h2>Growing Businesses <br /><span className="gradient-text">Through Smart Strategy</span></h2>
                 <div className="founder-letter">
                   <p>
@@ -138,7 +138,8 @@ export default function About() {
                     presence delivers measurable, sustainable returns.
                   </p>
                   <p>
-                    As a graduate of Computer Science, former programming instructor, HR manager, and Outstanding Cebuano Youth Leader awardee in 2000
+                    As a graduate of Computer Science, former programming instructor, HR manager,
+                    and Outstanding Cebuano Youth Leader awardee in 2000
                     I bring a unique combination of technical expertise, leadership, and people-focused
                     strategy into every project. My background has given me the ability to bridge
                     technology with real business needs — helping teams, brands, and organizations
@@ -158,7 +159,7 @@ export default function About() {
                 </div>
                 <div className="founder-signature">
                   <div className="founder-name">Glenda Agnes</div>
-                  <div className="founder-title">CFO &amp; Head of Strategy</div>
+                  <div className="founder-title">VP for Finance and Admin</div>
                 </div>
               </div>
             </ScrollReveal>
@@ -169,7 +170,7 @@ export default function About() {
                 <div className="founder-image-bg"></div>
                 <img
                   src="/team/glenda-agnes.png"
-                  alt="Glenda Agnes - CFO and Head of Strategy at GRIFN"
+                  alt="Glenda Agnes - VP for Finance and Admin at GRIFN"
                   className="founder-image"
                   style={{ objectPosition: 'top center' }}
                 />
@@ -307,14 +308,8 @@ export default function About() {
                 >
                 </div>
                 <h3>Arjun Haincadto</h3>
-                <div className="role">Founder & Lead Dev</div>
+                <div className="role">Founder & Lead President</div>
                 <p>Full-stack developer with 8+ years experience building scalable web apps.</p>
-              </div>
-              <div className="team-card">
-                <div className="team-avatar">CG</div>
-                <h3>Clark Gomez</h3>
-                <div className="role">Creative Director</div>
-                <p>Specializing in premium UI/UX design for Philippine and international brands.</p>
               </div>
               <div className="team-card">
                 <div
@@ -327,8 +322,14 @@ export default function About() {
                 >
                 </div>
                 <h3>Glenda Agnes</h3>
-                <div className="role">CFO &amp; Head of Strategy</div>
+                <div className="role">VP for Finance and Admin</div>
                 <p>Strategic financial leader driving growth, digital ROI, and long-term brand equity for GRIFN clients.</p>
+              </div>
+              <div className="team-card">
+                <div className="team-avatar">CG</div>
+                <h3>Clark Gomez</h3>
+                <div className="role">Creative Director</div>
+                <p>Specializing in premium UI/UX design for Philippine and international brands.</p>
               </div>
             </div>
           </ScrollReveal>
