@@ -13,13 +13,13 @@ GRIFN is a premium software studio based in Cebu, Philippines, specializing in h
 We focus on "Results First" — building websites that aren't just visually stunning but also drive leads, sales, and real business growth. Every project includes foundational SEO, structured data (JSON-LD), and Core Web Vitals optimization.
 
 ## Links
-- [Home](https://grifn.dev/)
-- [About Us](https://grifn.dev/about)
-- [Portfolio](https://grifn.dev/#portfolio)
-- [Pricing](https://grifn.dev/pricing)
-- [Get a Quote](https://grifn.dev/quote)
+- [Home](https://grifn-website.vercel.app/)
+- [About Us](https://grifn-website.vercel.app/about)
+- [Portfolio](https://grifn-website.vercel.app/#portfolio)
+- [Pricing](https://grifn-website.vercel.app/pricing)
+- [Get a Quote](https://grifn-website.vercel.app/quote)
 
 ## Contact
-- **Website:** https://grifn.dev
+- **Website:** https://grifn-website.vercel.app
 - **Facebook:** https://www.facebook.com/profile.php?id=61588838560417
 - **LinkedIn:** https://www.linkedin.com/company/grifn-software-solutions/

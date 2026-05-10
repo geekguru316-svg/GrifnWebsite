@@ -13,8 +13,8 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "GRIFN Software Solutions",
-  image: "https://grifn.dev/logo.png",
-  url: "https://grifn.dev/",
+  image: "https://grifn-website.vercel.app/logo.png",
+  url: "https://grifn-website.vercel.app/",
   telephone: "+639178396962",
   address: {
     "@type": "PostalAddress",
@@ -94,7 +94,7 @@ const faqSchema = {
       name: "How much does a website cost at GRIFN?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Website pricing varies based on project scope, complexity, and features required. GRIFN offers custom quotes for every project — from landing pages to full-scale web applications. You can request a free quote directly on our website at grifn.dev.",
+        text: "Website pricing varies based on project scope, complexity, and features required. GRIFN offers custom quotes for every project — from landing pages to full-scale web applications. You can request a free quote directly on our website at grifn-website.vercel.app.",
       },
     },
     {
@@ -142,7 +142,7 @@ const faqSchema = {
       name: "How do I get started with GRIFN?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Getting started is simple. You can request a free quote or book a discovery call directly on our website at grifn.dev. We'll discuss your goals, timeline, and budget to create a custom proposal for your project.",
+        text: "Getting started is simple. You can request a free quote or book a discovery call directly on our website at grifn-website.vercel.app. We'll discuss your goals, timeline, and budget to create a custom proposal for your project.",
       },
     },
   ],
@@ -162,7 +162,7 @@ export const metadata: Metadata = {
     title: "Software Solutions & Web Design Cebu | GRIFN Philippines",
     description:
       "Premium software solutions, web design, and UI/UX strategy for ambitious brands in Cebu and the Philippines. We build websites and digital case studies that convert.",
-    url: "https://grifn.dev",
+    url: "https://grifn-website.vercel.app",
     siteName: "GRIFN Software Solutions",
     images: [{ url: "/og-banner.png", width: 1200, height: 630, alt: "GRIFN Software Solutions — Web Design Cebu Philippines" }],
     type: "website",

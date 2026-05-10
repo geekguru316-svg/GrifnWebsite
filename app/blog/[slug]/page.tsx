@@ -81,12 +81,12 @@ export default async function BlogPost({ params }: Props) {
     publisher: {
       '@type': 'Organization',
       name: 'GRIFN Software Solutions',
-      url: 'https://grifn.dev',
-      logo: { '@type': 'ImageObject', url: 'https://grifn.dev/logo.png' },
+      url: 'https://grifn-website.vercel.app',
+      logo: { '@type': 'ImageObject', url: 'https://grifn-website.vercel.app/logo.png' },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://grifn.dev/blog/${post.slug}`,
+      '@id': `https://grifn-website.vercel.app/blog/${post.slug}`,
     },
   };
 
