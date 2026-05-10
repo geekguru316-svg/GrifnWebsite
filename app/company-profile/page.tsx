@@ -234,6 +234,17 @@ export default function CompanyProfile() {
         </div>
         <span className="pnum">05</span>
       </section>
+
+      {/* Floating Action Button for Printing - Hidden in Print mode */}
+      <div className="no-print" style={{ position: 'fixed', bottom: '40px', left: '40px', z-index: 1000 }}>
+        <button 
+          onClick={() => window.print()} 
+          className="btn btn-primary"
+          style={{ boxShadow: '0 0 30px rgba(139, 92, 246, 0.4)' }}
+        >
+          🖨️ Export as PDF
+        </button>
+      </div>
     </div>
   );
 }

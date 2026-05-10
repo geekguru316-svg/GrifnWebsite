@@ -175,4 +175,7 @@
   .profile-bar {
     position: static;
   }
+  .no-print {
+    display: none !important;
+  }
 }
