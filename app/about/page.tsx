@@ -113,7 +113,7 @@ export default function About() {
                 </div>
                 <div className="founder-signature">
                   <div className="founder-name">Arjun Haincadto</div>
-                  <div className="founder-title">Founder & Lead President</div>
+                  <div className="founder-title">Founder & President</div>
                 </div>
               </div>
             </ScrollReveal>
