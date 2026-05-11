@@ -50,7 +50,7 @@ export default function QuotePage() {
                   <div className="contact-icon">📍</div>
                   <div className="contact-text">
                     <h3>Visit Our Studio</h3>
-                    <p>IT Park, Lahug, Cebu City 6000<br/>Philippines</p>
+                    <p>L. Gabuya St, Cogon Pardo, Cebu City 6000<br/>Philippines</p>
                   </div>
                 </div>
               </div>
